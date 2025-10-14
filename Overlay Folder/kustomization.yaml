@@ -1,0 +1,12 @@
+bases:
+  - ../../base  # path to base folder
+
+images:
+  - name: nginx
+    newTag: 1.23.2  # override image version
+
+configMapGenerator:
+  - name: nginx-config
+    literals:
+      - APP_ENV=production
+      - APP_MESSAGE=Deployed via GitOps
