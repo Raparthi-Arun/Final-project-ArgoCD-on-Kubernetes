@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: my-app
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: my-app
@@ -13,10 +13,7 @@ spec:
         app: my-app
     spec:
       containers:
-      - name: my-app
-        image: nginx:1.25
-        ports:
-        - containerPort: 80
-        envFrom:
-        - configMapRef:
-            name: my-app
+        - name: my-app
+          image: nginx:1.25
+          ports:
+            - containerPort: 80
