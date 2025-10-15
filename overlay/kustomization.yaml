@@ -6,4 +6,5 @@ patches:
   - path: deployment-patch.yaml
     target:
       kind: Deployment
-      name: my-app   # must match metadata.name in base/deployment.yaml
+      name: my-app # must match metadata.name in base/deployment.yaml
+
