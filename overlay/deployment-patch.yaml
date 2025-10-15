@@ -3,9 +3,8 @@ kind: Deployment
 metadata:
   name: my-app
 spec:
-  replicas: 3   # override number of replicas for production
   template:
     spec:
       containers:
         - name: my-app
-          image: myusername/my-app:prod   # production image
+          image: nginx:1.26
